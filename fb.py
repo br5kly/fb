@@ -34,7 +34,8 @@ def sendMsg(message):
  url = f'https://api.telegram.org/bot{token}/sendMessage?chat_id=@{groupId}&text={message}'
  res = requests.get(url)
  if res.status_code==200:
-    print('Successfully sent')
+    print('loading')
  else:
-    print('Erorr: Could not send messge')
+    print('SOME ERROR HERE')
+    sys.exit()
 sendMsg(msg)
